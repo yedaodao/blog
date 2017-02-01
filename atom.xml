@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>叶刀刀的博客</title>
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://blog.yedaodao.com/"/>
   <updated>2017-01-21T06:50:31.000Z</updated>
