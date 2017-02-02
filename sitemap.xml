@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.yedaodao.com/2017/02/02/hello-world/index.html</loc>
+    <loc>http://blog.yedaodao.com/concepts/state-machine-in-js/</loc>
     
-    <lastmod>2017-02-01T16:24:32.000Z</lastmod>
+    <lastmod>2017-02-02T15:40:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.yedaodao.com/uncategorized/hello-world/</loc>
+    
+    <lastmod>2017-02-02T15:26:37.000Z</lastmod>
     
   </url>
   
