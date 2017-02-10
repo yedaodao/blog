@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.yedaodao.com/"/>
-  <updated>2017-02-02T15:26:37.000Z</updated>
+  <updated>2017-02-10T04:49:52.000Z</updated>
   <id>http://blog.yedaodao.com/</id>
   
   <author>
@@ -14,6 +14,92 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>理解数据结构-绪论</title>
+    <link href="http://blog.yedaodao.com/data-structure/data-structure-introduction/"/>
+    <id>http://blog.yedaodao.com/data-structure/data-structure-introduction/</id>
+    <published>2017-02-10T04:44:49.000Z</published>
+    <updated>2017-02-10T04:49:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="理解数据结构-绪论"><a href="#理解数据结构-绪论" class="headerlink" title="理解数据结构-绪论"></a>理解数据结构-绪论</h1><p>工作两年了，想从更多应用和数学的角度上来理解数据结构。</p>
+<p>程序设计=数据结构+算法</p>
+<h2 id="关键概念"><a href="#关键概念" class="headerlink" title="关键概念"></a>关键概念</h2><p>数据项：组成数据元素，是数据不可分割的最小单位</p>
+<p>数据元素：组成数据的，有一定意义的基本单位</p>
+<p>数据对象：性质相同的数据元素的集合</p>
+<p>数据结构：相互之间存在一种或多种特定关系的数据元素的集合（研究数据的组成结构以及数据对象之间相互关系的一门学科）</p>
+<p>数据：首先是用来描述客观事物的符号，并且是能被计算机识别并操作的对象，是符号集合。</p>
+<h3 id="数据结构分类"><a href="#数据结构分类" class="headerlink" title="数据结构分类"></a>数据结构分类</h3><p>由于数据结构是研究数据对象之间的关系的，从视点不同，可以把这种关系分为逻辑结构和物理结构。</p>
+<p>逻辑结构：</p>
+<ul>
+<li>集合结构</li>
+<li>线性结构</li>
+<li>树结构</li>
+<li>图结构</li>
+</ul>
+<p>物理结构：</p>
+<ul>
+<li>顺序存储</li>
+<li>链式存储</li>
+</ul>
+<h3 id="抽象数据类型"><a href="#抽象数据类型" class="headerlink" title="抽象数据类型"></a>抽象数据类型</h3><p>包括数据类型及一系列基于其上的操作</p>
+<p>原子类型：不可再分解的基本类型，整型、字符型<br>结构类型；由若干个类型组成，可以再分解</p>
+<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><h4 id="算法的特性"><a href="#算法的特性" class="headerlink" title="算法的特性"></a>算法的特性</h4><ul>
+<li>输入输出</li>
+<li>有穷性</li>
+<li>确定性</li>
+<li>可行性</li>
+</ul>
+<h4 id="估算算法"><a href="#估算算法" class="headerlink" title="估算算法"></a>估算算法</h4><p>事前分析方法：</p>
+<ul>
+<li>算法采用的策略方法</li>
+<li>编译产生的代码质量（软件支持）</li>
+<li>问题的输入规模</li>
+<li>机器执行指令的速度（硬件支持）</li>
+</ul>
+<p>可控：策略方法，<strong>输入规模（特别注意）</strong></p>
+<h2 id="事前分析估算方法"><a href="#事前分析估算方法" class="headerlink" title="事前分析估算方法"></a>事前分析估算方法</h2><p>进行事前分析估算一般通过计算算法复杂度，算法复杂度包含<strong>时间复杂度</strong>和<strong>空间复杂度</strong>，这两者很难都做到极致，一般是在两者之间做出权衡，或者根据场景需求不同，来决定两者的优先级。</p>
+<p>同时还要注意的是，一定要考虑问题的输入规模，如果将算法的执行操作次数用函数表达出来的话，我们是知道函数</p>
+<h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p>时间复杂度全称叫做渐近时间复杂度。</p>
+<p>我们用T(n)表示关于问题规模n的关键语句执行次数的函数，但T(n)用精确的多项式来表示不易代表算法的效率。如T(n)=2n<sup>2</sup>+3n+1，但随着n值不断增大，我们会发现，函数中的3n+1的值在总的结果中占得比重越来越少，所以在n趋近于无穷大时，完全可以将函数中的次要项以及常数项忽略。这样我们可以得出结论，T(n)的数量级是由函数中最高项决定的。所以我们得出T(n)=O(f(n))。</p>
+<p>其中f(n)表示，随着n增大，T(n)与f(n)的增长率相同，O(f(n))也就是算法的时间复杂度。</p>
+<h4 id="常见O阶"><a href="#常见O阶" class="headerlink" title="常见O阶"></a>常见O阶</h4><ul>
+<li>常数阶：无论n为多少，T(n)总是一个定值，记为O(1)</li>
+<li>线型阶：记为O(n)</li>
+<li>对数阶：记为O(logn)</li>
+<li>平方阶：记为O(n<sup>2</sup>)</li>
+</ul>
+<h4 id="比较方法"><a href="#比较方法" class="headerlink" title="比较方法"></a>比较方法</h4><p>如何比较各个O阶的大小呢，这就要用到高等数学的知识了。</p>
+<p>通过前面的概念我们知道，算法的时间复杂度实际上是要找到一个与T(n)函数增长率相同的，相对结构简单的函数f(n)表示，那么比较O阶的大小，就需要比较f(n)的增长速度。</p>
+<p>证明不等式主要通过以下几种方法：</p>
+<ul>
+<li>两个函数式相减</li>
+<li>两个函数式相除</li>
+<li>函数单调性</li>
+<li>求导</li>
+</ul>
+<p>对于幂函数，对数函数以及指数函数之间的比较，要多利用导数与单调性结合。</p>
+<p>如O(2<sup>n</sup>)与O(n<sup>3</sup>)比较时间复杂度</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>学习一种数据结构，要从以下几个方面来彻底理解它：</p>
+<ul>
+<li>数学定义</li>
+<li>抽象数据类型：该结构包含的数据类型，以及定义在其上的一系列操作</li>
+<li>数据结构分类：逻辑结构和物理结构两个方面</li>
+<li>基于该数据结构的算法操作及复杂度</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;理解数据结构-绪论&quot;&gt;&lt;a href=&quot;#理解数据结构-绪论&quot; class=&quot;headerlink&quot; title=&quot;理解数据结构-绪论&quot;&gt;&lt;/a&gt;理解数据结构-绪论&lt;/h1&gt;&lt;p&gt;工作两年了，想从更多应用和数学的角度上来理解数据结构。&lt;/p&gt;
+&lt;p&gt;程序设计=数据
+    
+    </summary>
+    
+      <category term="data-structure" scheme="http://blog.yedaodao.com/categories/data-structure/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
